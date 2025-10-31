@@ -1,0 +1,22 @@
+---
+// src/components/Header.astro
+---
+
+<header class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-99999 backdrop-blur-xs">
+  <!-- Logo / Título -->
+  <div>
+    <a href="/">
+      
+      <img src="../src/assets/images/logo.png" class="h-13 w-auto -mt-2" />
+    </a>
+  </div>
+
+  <!-- Navegación -->
+  <nav>
+    <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Galeria</a></li>
+    </ul>
+  </nav>
+</header>

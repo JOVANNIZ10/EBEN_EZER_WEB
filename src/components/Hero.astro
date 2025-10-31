@@ -1,0 +1,21 @@
+---
+const { image, title, subtitle } = Astro.props;
+---
+
+<section id="inicio" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+  <!-- Imagen -->
+  <img
+    src={image}
+    alt={title}
+    class="absolute z-0 top-0 left-0 w-full h-full object-cover object-center blur-xs"
+  />
+
+  <!-- Capa de oscurecimiento -->
+  <div class="absolute z-10 inset-0 bg-black/50"></div>
+
+  <!-- Contenido centrado -->
+  <div class="relative z-10 text-center text-white px-4 ">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">{title}</h1>
+    <p class="text-lg md:text-2xl text-gray-200">{subtitle}</p>
+  </div>
+</section>

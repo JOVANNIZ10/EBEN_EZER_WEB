@@ -1,6 +1,16 @@
 ---
 import "../styles/global.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 ---
-<h1 class="text-3xl ">
-  Hello world!
-</h1>
+
+<MainLayout>
+  <Header slot="header" />
+  <Hero
+    image="src/assets/images/foto.jpg"
+    title="Eben Ezer"
+    subtitle="Un grupo perteneciente a la Iglesia Pentecostal Elim Beasain"
+  />
+</MainLayout>
+
