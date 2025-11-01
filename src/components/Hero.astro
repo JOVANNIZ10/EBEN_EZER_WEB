@@ -2,20 +2,32 @@
 const { image, title, subtitle } = Astro.props;
 ---
 
-<section id="inicio" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<section
+  id="inicio"
+  class="relative h-screen w-screen text-center overflow-hidden"
+>
   <!-- Imagen -->
   <img
     src={image}
     alt={title}
-    class="absolute z-0 top-0 left-0 w-full h-full object-cover object-center blur-xs"
+    class="absolute inset-0 w-full h-full object-cover z-0 blur-xs"
   />
 
   <!-- Capa de oscurecimiento -->
   <div class="absolute z-10 inset-0 bg-black/50"></div>
 
   <!-- Contenido centrado -->
-  <div class="relative z-10 text-center text-white px-4 ">
+  <div
+    class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-10 -translate-y-30"
+  >
     <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">{title}</h1>
-    <p class="text-lg md:text-2xl text-gray-200">{subtitle}</p>
+    <p class="text-lg md:text-2xl text -gray-200">{subtitle}</p>
+
+    <a
+      href="https://www.youtube.com/@grupul.ebenezer"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="border border-white bg-transparent text-white px-6 py-3 rounded-md font-semibold hover:bg-black hover:text-white hover:border-black transition-colors duration-200 translate-y-50"
+    >YouTube</a>
   </div>
 </section>
