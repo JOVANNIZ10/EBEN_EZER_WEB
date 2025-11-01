@@ -1,20 +1,21 @@
 ---
 import "../styles/global.css";
 ---
-<html lang="es" >
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eben Ezer</title>
     <link rel="icon" type="image/png" href="/images/logo.png" />
   </head>
-  <body class="bg-black text-white ">
+  <body class="bg-black text-white m-0 p-0 overflow-x-hidden">
     <header>
       <slot name="header" />
     </header>
 
-    <main class=""> <!-- agrega margen superior para header fijo -->
-      <slot />
+    <main class="m-0 p-0"> <!-- agrega margen superior para header fijo -->
+      <slot name="hero"/>
+      <slot name="nosotros"/>
     </main>
 
     <footer>

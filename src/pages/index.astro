@@ -3,14 +3,17 @@ import "../styles/global.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import Nosotros from "../components/Nosotros.astro";
 ---
 
 <MainLayout>
   <Header slot="header" />
-  <Hero
+  <Hero slot="hero"
     image="/images/foto.jpg"
     title="Eben Ezer"
     subtitle="Un grupo perteneciente a la Iglesia Pentecostal Elim Beasain"
   />
+  <Nosotros slot="nosotros"/>
+
 </MainLayout>
 
