@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+.shadow-white {
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+}
+.shadow-black {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-dark nav a {
+  color: black !important;
+}
+
+.header-dark {
+  color: black;
+}
+
+.header-dark img {
+  filter: brightness(0) invert(0); /* Convierte el logo a negro si es PNG transparente */
+}
+

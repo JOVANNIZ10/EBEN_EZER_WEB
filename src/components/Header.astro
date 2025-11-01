@@ -2,12 +2,18 @@
 // src/components/Header.astro
 ---
 
-<header class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-99999 backdrop-blur-xs">
+<header
+  id="main-header"
+  class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-99999 backdrop-blur-md transition-shadow duration-300 bg-transparent text-white"
+>
   <!-- Logo / Título -->
   <div>
     <a href="/">
-      
-      <img src="/images/logo.png" alt="logo eben ezer" class="h-13 w-auto -mt-2" />
+      <img
+        src="/images/logo.png"
+        alt="logo eben ezer"
+        class="h-13 w-auto -mt-2"
+      />
     </a>
   </div>
 
@@ -19,4 +25,40 @@
       <li><a href="#">Galeria</a></li>
     </ul>
   </nav>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("main-header");
+    const nosotrosSection = document.getElementById("nosotros");
+
+    if (!header || !nosotrosSection) return; // Evita errores si no existen
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      // 1. Añadir efecto de luz al hacer scroll
+      if (scrollY > 10) {
+        header.classList.add("shadow-white");
+      } else {
+        header.classList.remove("shadow-white");
+      }
+
+      // 2. Detectar si el header está sobre la sección blanca
+      const sectionTop = nosotrosSection.offsetTop;
+      const sectionBottom = sectionTop + nosotrosSection.offsetHeight;
+      const headerTop = scrollY + header.offsetTop;
+
+      if (headerTop >= sectionTop && headerTop <= sectionBottom) {
+        header.classList.add("header-dark");
+        header.classList.remove("shadow-white");
+        if(headerTop>=sectionTop+10){
+          header.classList.add("shadow-black");
+        }
+      } else {
+        header.classList.remove("header-dark");
+        header.classList.remove("shadow-black");
+      }
+    });
+  });
+</script>
 </header>
