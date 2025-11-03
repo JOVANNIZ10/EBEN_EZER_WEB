@@ -4,7 +4,7 @@
 
 <header
   id="main-header"
-  class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-99999 backdrop-blur-md transition-shadow duration-300 bg-transparent text-white"
+  class="py-6 px-10 flex items-center fixed top-0 w-full justify-between z-100 backdrop-blur-md transition-all duration-300 bg-transparent text-white"
 >
   <!-- Logo / Título -->
   <div>
@@ -45,18 +45,20 @@
 
       // 2. Detectar si el header está sobre la sección blanca
       const sectionTop = nosotrosSection.offsetTop;
-      const sectionBottom = sectionTop + nosotrosSection.offsetHeight;
+      const sectionBottom = sectionTop + nosotrosSection.offsetHeight;  
       const headerTop = scrollY + header.offsetTop;
 
       if (headerTop >= sectionTop && headerTop <= sectionBottom) {
         header.classList.add("header-dark");
         header.classList.remove("shadow-white");
-        if(headerTop>=sectionTop+10){
+        if(headerTop>sectionTop+10){
           header.classList.add("shadow-black");
+        }else{
+           header.classList.remove("shadow-black");
         }
       } else {
         header.classList.remove("header-dark");
-        header.classList.remove("shadow-black");
+       
       }
     });
   });
