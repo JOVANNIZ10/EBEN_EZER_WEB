@@ -22,12 +22,12 @@
     <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#">Galeria</a></li>
+      <li><a href="#galeria">Galeria</a></li>
     </ul>
   </nav>
 
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("main-header");
     const nosotrosSection = document.getElementById("nosotros");
 
@@ -47,7 +47,6 @@
       const sectionTop = nosotrosSection.offsetTop;
       const sectionBottom = sectionTop + nosotrosSection.offsetHeight;  
       const headerTop = scrollY + header.offsetTop;
-
       if (headerTop >= sectionTop && headerTop <= sectionBottom) {
         header.classList.add("header-dark");
         header.classList.remove("shadow-white");
