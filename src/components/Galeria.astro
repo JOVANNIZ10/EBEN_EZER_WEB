@@ -1,12 +1,105 @@
 ---
 // src/components/Galeria.astro
 ---
-
-<section id="galeria" class="min-h-screen w-full bg-white text-black flex items-center justify-center px-6 py-16">
-  <div class="max-w-3xl text-center">
-    <h2 class="text-4xl font-bold mb-4">Galeria</h2>
-    <p class="text-lg text-gray-700">
-      Somos un grupo comprometido con nuestra misión y valores, trabajando juntos para crecer y servir a nuestra comunidad.
+<section
+  id="galeria"
+  class="w-full bg-white text-black flex flex-col items-center justify-center px-6 py-24 md:py-32"
+>
+  <div class="max-w-6xl w-full text-center mb-12">
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
+      Galería
+    </h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+      Momentos que reflejan nuestra unidad, alegría y el amor de Dios en cada encuentro.
     </p>
   </div>
+
+  <!-- Galería moderna tipo masonry -->
+  <div
+    class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 w-full max-w-6xl"
+  >
+    <!-- Imagen 1 -->
+    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+      <img
+        src="/images/foto.jpg"
+        alt="Reunión de grupo"
+        class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div
+        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+      >
+        <p class="text-white text-lg font-semibold">Reunión de grupo</p>
+      </div>
+    </div>
+
+    <!-- Imagen 2 -->
+    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+      <img
+        src="/images/foto.jpg"
+        alt="Momento de oración"
+        class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div
+        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+      >
+        <p class="text-white text-lg font-semibold">Momento de oración</p>
+      </div>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+      <img
+        src="/images/foto.jpg"
+        alt="Servicio especial"
+        class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div
+        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+      >
+        <p class="text-white text-lg font-semibold">Servicio especial</p>
+      </div>
+    </div>
+
+    <!-- Imagen 4 -->
+    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+      <img
+        src="/images/foto.jpg"
+        alt="Ensayo del grupo"
+        class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div
+        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+      >
+        <p class="text-white text-lg font-semibold">Ensayo del grupo</p>
+      </div>
+    </div>
+
+    <!-- Imagen 5 -->
+    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+      <img
+        src="/images/foto.jpg"
+        alt="Encuentro de jóvenes"
+        class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div
+        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+      >
+        <p class="text-white text-lg font-semibold">Encuentro de jóvenes</p>
+      </div>
+    </div>
+
+    <!-- Imagen 6 -->
+    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+      <img
+        src="/images/foto.jpg"
+        alt="Alabanza"
+        class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+      />
+      <div
+        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+      >
+        <p class="text-white text-lg font-semibold">Alabanza</p>
+      </div>
+    </div>
+
 </section>

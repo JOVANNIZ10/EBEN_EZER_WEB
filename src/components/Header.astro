@@ -17,7 +17,6 @@
     </a>
   </div>
 
-  <!-- Navegación -->
   <nav>
     <ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
       <li><a href="#inicio">Inicio</a></li>
@@ -31,23 +30,21 @@
     const header = document.getElementById("main-header");
     const nosotrosSection = document.getElementById("nosotros");
 
-    if (!header || !nosotrosSection) return; // Evita errores si no existen
+    if (!header || !nosotrosSection) return;
 
     window.addEventListener("scroll", () => {
       const scrollY = window.scrollY;
 
-      // 1. Añadir efecto de luz al hacer scroll
       if (scrollY > 10) {
         header.classList.add("shadow-white");
       } else {
         header.classList.remove("shadow-white");
       }
 
-      // 2. Detectar si el header está sobre la sección blanca
       const sectionTop = nosotrosSection.offsetTop;
       const sectionBottom = sectionTop + nosotrosSection.offsetHeight;  
       const headerTop = scrollY + header.offsetTop;
-      if (headerTop >= sectionTop && headerTop <= sectionBottom) {
+      if (headerTop >= sectionTop) {
         header.classList.add("header-dark");
         header.classList.remove("shadow-white");
         if(headerTop>sectionTop+10){
